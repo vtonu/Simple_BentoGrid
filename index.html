@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link type="image/png" sizes="64x64" rel="icon" href="./favicon.png" />
-    <meta
-      name="description"
+    <meta name="description"
       content="A simple bento grid style with just html & css, including GTA V images." />
     <meta name="author" content="quality" />
     <title>Bento Grid</title>
@@ -18,6 +18,7 @@
         margin: 0;
         background: rgba(255, 255, 255, 0.1);
       }
+
       body::after {
         content: '';
         opacity: 0.81;
@@ -27,52 +28,55 @@
         right: 0;
         bottom: 0;
         z-index: -1;
-        background: url('https://pbs.twimg.com/media/EwoD1DlWQAgMaEb?format=jpg&name=4096x4096')
-          center/cover no-repeat;
+        background: url('https://pbs.twimg.com/media/EwoD1DlWQAgMaEb?format=jpg&name=4096x4096') center/cover no-repeat;
       }
+
       .container {
         width: 100%;
         padding: 10px;
         border-radius: 7px;
-        border: 1px solid #949494;
-        background: rgba(255, 255, 255, 0.81);
+        background: rgba(255, 255, 255, 0.89);
+        border: 1px solid #db3379;
       }
+
       .containerHeader {
         width: 100%;
         padding: 10px;
         border-radius: 7px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        gap: 10px;
         align-items: center;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-weight: 700;
         height: 15px;
         margin-bottom: 10px;
         background: rgba(255, 255, 255, 0.91);
-        color: #1f0615;
-        border: 1px solid #949494;
+        border: 1px solid #db3379;
       }
+
       .bento-container {
         display: flex;
         gap: 10px;
       }
+
       .bento-column {
         flex: 1;
         display: flex;
         flex-direction: column;
         gap: 10px;
       }
+
       .bento-item {
         flex: 1;
         background-size: cover;
         background-position: center;
-        border: 1px solid #707070;
         border-radius: 5px;
         box-sizing: border-box;
         padding: 100px;
+        border: 1px solid #db3379;
       }
+
       .light {
-        background: linear-gradient(to bottom, #fceded, #e91c71);
+        background: linear-gradient(to bottom, #ffffff, #e91c71);
         filter: blur(88px);
         flex: none;
         height: 100px;
@@ -82,6 +86,7 @@
         width: 50%;
         transform: rotate(0deg);
       }
+
       .saesLogo {
         position: absolute;
         top: 91%;
@@ -89,8 +94,31 @@
         opacity: 0.3;
         transform: translate(-50%, -50%);
       }
+
+      .homeButton {
+        font-size: 14px;
+        padding: 3px 15px;
+        font-weight: 600;
+        border: none;
+        outline: none;
+        color: #35242b;
+        background: linear-gradient(30deg,
+            transparent 20%,
+            transparent 40%,
+            rgb(255, 255, 255, 0.4) 50%,
+            rgb(255, 255, 255, 0.4) 55%,
+            transparent 70%,
+            transparent 100%);
+        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.1);
+        border-radius: 2px;
+        box-shadow: 0 2px 2px rgba(32, 26, 28, 0.3);
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        font-family: Arial, Helvetica, sans-serif;
+      }
     </style>
   </head>
+
   <body>
     <div class="light"></div>
     <div class="app">
@@ -98,58 +126,44 @@
         <div class="homeButton">HOME</div>
         <div class="homeButton">STORAGE</div>
         <div class="homeButton">SETTINGS</div>
+        <div class="homeButton">CLOSE</div>
       </div>
       <div class="container">
         <div class="bento-container">
           <div class="bento-column">
-            <div
-              class="bento-item"
-              style="
+            <div class="bento-item" style="
                 background-image: url('https://wallpapers.com/images/hd/fivem-bldyf0pkd4fjd0uf.jpg');
               "></div>
-            <div
-              class="bento-item"
-              style="
+            <div class="bento-item" style="
                 background-image: url('https://e0.pxfuel.com/wallpapers/412/209/desktop-wallpaper-fivem.jpg');
               "></div>
-            <div
-              class="bento-item"
-              style="
+            <div class="bento-item" style="
                 background-image: url('https://wallpapercrafter.com/desktop/126515-city-anime-sky-landscape-Grand-Theft-Auto-V-Grand-Theft-Auto-V-Online.jpg');
               "></div>
           </div>
           <div class="bento-column">
-            <div
-              class="bento-item"
-              style="
+            <div class="bento-item" style="
                 background-image: url('https://pbs.twimg.com/media/EwoD1DlWQAgMaEb?format=jpg&name=4096x4096');
               "></div>
-            <div
-              class="bento-item"
-              style="
+            <div class="bento-item" style="
                 background-image: url('https://c4.wallpaperflare.com/wallpaper/278/572/890/core-roleplay-grand-theft-auto-grand-theft-auto-v-roleplaying-fivem-hd-wallpaper-preview.jpg');
               "></div>
           </div>
           <div class="bento-column">
-            <div
-              class="bento-item"
-              style="
+            <div class="bento-item" style="
                 background-image: url('https://www.chromethemer.com/download/hd-wallpapers/gta-5-trunk-2560x1440.jpg');
               "></div>
-            <div
-              class="bento-item"
-              style="
+            <div class="bento-item" style="
                 background-image: url('https://img.goodfon.com/original/1366x768/c/ea/grand-theft-auto-v-gta-5-game-city-street-gta-v.jpg');
               "></div>
-            <div
-              class="bento-item"
-              style="
+            <div class="bento-item" style="
                 background-image: url('https://e0.pxfuel.com/wallpapers/435/730/desktop-wallpaper-gta-5-helicopters-3d-graphics-games-skyscrapers.jpg');
               "></div>
           </div>
         </div>
       </div>
     </div>
-    <img src="./logo.png" class="saesLogo" height="100" ></img>
+    <img src="./logo.png" class="saesLogo" height="100"></img>
   </body>
+
 </html>
