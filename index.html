@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link type="image/png" sizes="32x32" rel="icon" href="./favicon.png" />
+    <link type="image/png" sizes="64x64" rel="icon" href="./favicon.png" />
     <meta
       name="description"
       content="A simple bento grid style with just html & css, including GTA V images." />
-    <meta name="author" content="vtonu" />
+    <meta name="author" content="quality" />
     <title>Bento Grid</title>
     <style>
       body {
@@ -18,109 +18,138 @@
         margin: 0;
         background: rgba(255, 255, 255, 0.1);
       }
-
       body::after {
         content: '';
-        background: url('https://pbs.twimg.com/media/EwoD1DlWQAgMaEb?format=jpg&name=4096x4096')
-          center/cover no-repeat;
-        opacity: 0.79;
+        opacity: 0.81;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         z-index: -1;
+        background: url('https://pbs.twimg.com/media/EwoD1DlWQAgMaEb?format=jpg&name=4096x4096')
+          center/cover no-repeat;
       }
-
       .container {
-        width: 50%;
-        background: rgba(255, 255, 255, 0.75);
+        width: 100%;
         padding: 10px;
+        border-radius: 7px;
         border: 1px solid #949494;
-        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.81);
       }
-
+      .containerHeader {
+        width: 100%;
+        padding: 10px;
+        border-radius: 7px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 700;
+        height: 15px;
+        margin-bottom: 10px;
+        background: rgba(255, 255, 255, 0.91);
+        color: #1f0615;
+        border: 1px solid #949494;
+      }
       .bento-container {
         display: flex;
-        gap: 8px;
+        gap: 10px;
       }
-
       .bento-column {
         flex: 1;
         display: flex;
         flex-direction: column;
         gap: 10px;
       }
-
       .bento-item {
         flex: 1;
         background-size: cover;
         background-position: center;
         border: 1px solid #707070;
-        border-radius: 6px;
+        border-radius: 5px;
         box-sizing: border-box;
         padding: 100px;
+      }
+      .light {
+        background: linear-gradient(to bottom, #fceded, #e91c71);
+        filter: blur(88px);
+        flex: none;
+        height: 100px;
+        left: 25%;
+        position: absolute;
+        top: 80%;
+        width: 50%;
+        transform: rotate(0deg);
+      }
+      .saesLogo {
+        position: absolute;
+        top: 91%;
+        left: 52%;
+        opacity: 0.3;
+        transform: translate(-50%, -50%);
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="bento-container">
-        <div class="bento-column">
-          <div
-            class="bento-item"
-            style="
-              height: 150px;
-              background-image: url('https://wallpapers.com/images/hd/fivem-bldyf0pkd4fjd0uf.jpg');
-            "></div>
-          <div
-            class="bento-item"
-            style="
-              height: 200px;
-              background-image: url('https://e0.pxfuel.com/wallpapers/412/209/desktop-wallpaper-fivem.jpg');
-            "></div>
-          <div
-            class="bento-item"
-            style="
-              height: 250px;
-              background-image: url('https://wallpapercrafter.com/desktop/126515-city-anime-sky-landscape-Grand-Theft-Auto-V-Grand-Theft-Auto-V-Online.jpg');
-            "></div>
-        </div>
-        <div class="bento-column">
-          <div
-            class="bento-item"
-            style="
-              height: 180px;
-              background-image: url('https://pbs.twimg.com/media/EwoD1DlWQAgMaEb?format=jpg&name=4096x4096');
-            "></div>
-          <div
-            class="bento-item"
-            style="
-              height: 220px;
-              background-image: url('https://c4.wallpaperflare.com/wallpaper/278/572/890/core-roleplay-grand-theft-auto-grand-theft-auto-v-roleplaying-fivem-hd-wallpaper-preview.jpg');
-            "></div>
-        </div>
-        <div class="bento-column">
-          <div
-            class="bento-item"
-            style="
-              height: 300px;
-              background-image: url('https://www.chromethemer.com/download/hd-wallpapers/gta-5-trunk-2560x1440.jpg');
-            "></div>
-          <div
-            class="bento-item"
-            style="
-              height: 150px;
-              background-image: url('https://img.goodfon.com/original/1366x768/c/ea/grand-theft-auto-v-gta-5-game-city-street-gta-v.jpg');
-            "></div>
-          <div
-            class="bento-item"
-            style="
-              height: 150px;
-              background-image: url('https://e0.pxfuel.com/wallpapers/435/730/desktop-wallpaper-gta-5-helicopters-3d-graphics-games-skyscrapers.jpg');
-            "></div>
+    <div class="light"></div>
+    <div class="app">
+      <div class="containerHeader">
+        <div class="homeButton">HOME</div>
+        <div class="homeButton">STORAGE</div>
+        <div class="homeButton">SETTINGS</div>
+      </div>
+      <div class="container">
+        <div class="bento-container">
+          <div class="bento-column">
+            <div
+              class="bento-item"
+              style="
+                background-image: url('https://wallpapers.com/images/hd/fivem-bldyf0pkd4fjd0uf.jpg');
+              "></div>
+            <div
+              class="bento-item"
+              style="
+                background-image: url('https://e0.pxfuel.com/wallpapers/412/209/desktop-wallpaper-fivem.jpg');
+              "></div>
+            <div
+              class="bento-item"
+              style="
+                background-image: url('https://wallpapercrafter.com/desktop/126515-city-anime-sky-landscape-Grand-Theft-Auto-V-Grand-Theft-Auto-V-Online.jpg');
+              "></div>
+          </div>
+          <div class="bento-column">
+            <div
+              class="bento-item"
+              style="
+                background-image: url('https://pbs.twimg.com/media/EwoD1DlWQAgMaEb?format=jpg&name=4096x4096');
+              "></div>
+            <div
+              class="bento-item"
+              style="
+                background-image: url('https://c4.wallpaperflare.com/wallpaper/278/572/890/core-roleplay-grand-theft-auto-grand-theft-auto-v-roleplaying-fivem-hd-wallpaper-preview.jpg');
+              "></div>
+          </div>
+          <div class="bento-column">
+            <div
+              class="bento-item"
+              style="
+                background-image: url('https://www.chromethemer.com/download/hd-wallpapers/gta-5-trunk-2560x1440.jpg');
+              "></div>
+            <div
+              class="bento-item"
+              style="
+                background-image: url('https://img.goodfon.com/original/1366x768/c/ea/grand-theft-auto-v-gta-5-game-city-street-gta-v.jpg');
+              "></div>
+            <div
+              class="bento-item"
+              style="
+                background-image: url('https://e0.pxfuel.com/wallpapers/435/730/desktop-wallpaper-gta-5-helicopters-3d-graphics-games-skyscrapers.jpg');
+              "></div>
+          </div>
         </div>
       </div>
     </div>
+    <img src="./logo.png" class="saesLogo" height="100" ></img>
   </body>
 </html>
