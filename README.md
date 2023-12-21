@@ -1,3 +1,1 @@
-### `Bento Grid Style`
-
-A simple bento grid style with pure css and html with GTA V images.
+A simple, modern bento-grid style in 1 HTML file using GTA V images.
